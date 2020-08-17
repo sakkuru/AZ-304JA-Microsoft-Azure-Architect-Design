@@ -198,7 +198,7 @@ Windows Server 管理者の認証資格情報
 
 #### タスク 1: Hyper-V 環境を構成する
 
-1. **az30308a-hv-vm** へのリモート デスクトップ セッション内で Internet Explorer を起動し、[[Microsoft ダウンロード センター](https://aka.ms/migrate/script/hyperv)] に移動して、構成 PowerShell スクリプトを Downloads フォルダーにダウンロードします。
+1. **az30308a-hv-vm** へのリモート デスクトップ セッション内で Internet Explorer を起動し、[Microsoft ダウンロード センター](https://aka.ms/migrate/script/hyperv) に移動して、構成 PowerShell スクリプトを Downloads フォルダーにダウンロードします。
 
     >**注**: スクリプトは次のタスクを実行します。
 
