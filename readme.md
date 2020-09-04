@@ -1,7 +1,7 @@
 ﻿# AZ-304: Microsoft Azure アーキテクト設計
 
 - **[HTML 形式の LABS へのリンク](https://microsoftlearning.github.io/AZ-304JA-Microsoft-Azure-Architect-Design/)**
-- **[最新の受講生ハンドブックと AllFiles コンテンツをダウンロードする](https://github.com/MicrosoftLearning/AZ-304-Microsoft-Azure-Architect-Design/archive/master.zip)**
+- **[最新の受講生ハンドブックと AllFiles コンテンツをダウンロードする](https://github.com/MicrosoftLearning/AZ-304JA-Microsoft-Azure-Architect-Design/archive/master.zip)**
 - **あなたは MCT ですか。** - [MCT 向け GitHub ユーザー ガイド](https://microsoftlearning.github.io/MCT-User-Guide-JA/)をご覧ください
 - **ラボの手順を手動でビルドする必要がありますか。** - 手順は、[MicrosoftLearning/Docker-Build](https://github.com/MicrosoftLearning/Docker-Build) リポジトリで利用可能です
 

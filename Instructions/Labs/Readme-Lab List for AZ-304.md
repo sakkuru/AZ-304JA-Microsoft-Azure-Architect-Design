@@ -1,7 +1,7 @@
 ﻿
-# AZ-304: GitHub のラボ ファイル名 
+#AZ-304: GitHub のラボ ファイル名 
  
-**ソース リポジトリ: [https://github.com/MicrosoftLearning/AZ-304-Microsoft-Azure-Architect-Design/](https://github.com/MicrosoftLearning/AZ-304-Microsoft-Azure-Architect-Design/)**
+**ソース リポジトリ: [https://github.com/MicrosoftLearning/AZ-304JA-Microsoft-Azure-Architect-Design/](https://github.com/MicrosoftLearning/AZ-304JA-Microsoft-Azure-Architect-Design/)**
 
 
 **モジュール 3 のラボ**
