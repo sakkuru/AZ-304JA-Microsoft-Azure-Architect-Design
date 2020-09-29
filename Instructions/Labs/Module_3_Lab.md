@@ -139,7 +139,7 @@ Windows Server 管理者の認証資格情報
 
 1. **az30308a-hv-vm** へのリモート デスクトップ セッション内で、「サーバーマネージャー」 ウィンドウの 「**ローカル サーバー**」 をクリックし、**IE セキュリティ強化の構成**ラベルの横にある 「**オン**」 リンクをクリックし、**IE セキュリティ強化の構成**ダイアログ ボックスで両方の 「**オフ**」 オプションを選択します 。
 
-1. **az30308a-hv-vm** へのリモート デスクトップ セッション内で、Internet Explorer を起動し、[Windows Serverの評価](https://www.microsoft.com/ja-jp/evalcenter/evaluate-windows-server-2019) を参照して、Windows Server 2019 **VHD** ファイルを **F:\VHDs** フォルダーにダウンロードします (最初にこのフォルダーを作成する必要があります)。 
+1. **az30308a-hv-vm** へのリモート デスクトップ セッション内で、Internet Explorer を起動し、[Windows Server Evaluations](https://www.microsoft.com/ja-jp/evalcenter/evaluate-windows-server-2019) を参照して、Windows Server 2019 **VHD** ファイルを **F:\VHDs** フォルダーにダウンロードします (最初にこのフォルダーを作成する必要があります)。 
 
 1. **az30308a-hv-vm** へのリモート デスクトップ セッション内で、**Hyper-V マネージャー**を起動します。 
 
