@@ -209,8 +209,8 @@ Windows Server 管理者の認証資格情報
                        connection.Open();       
                        StringBuilder sb = new StringBuilder();
                        sb.Append("SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName ");
-                       sb.Append("FROM 「SalesLT].「ProductCategory] pc ");
-                       sb.Append("JOIN 「SalesLT].「Product] p ");
+                       sb.Append("FROM [SalesLT].[ProductCategory] pc ");
+                       sb.Append("JOIN [SalesLT].[Product] p ");
                        sb.Append("ON pc.productcategoryid = p.productcategoryid;");
                        String sql = sb.ToString();
 
@@ -230,7 +230,7 @@ Windows Server 管理者の認証資格情報
                {
                    Console.WriteLine(e.ToString());
                }
-               Console.WriteLine("\nDone.Press enter.");
+               Console.WriteLine("\nDone. Press enter.");
                Console.ReadLine(); 
            }
        }
