@@ -147,7 +147,7 @@ Windows Server 管理者の認証資格情報
 
 #### タスク 1: Azure SQL データベースの ADO.NET 接続情報を特定する
 
-1. Azure portal 内の、前の演習でデプロイした Azure SQL データベースのブレードの 「**設定**」 セクションで、「**接続設定**」 を選択します。
+1. Azure portal 内の、前の演習でデプロイした Azure SQL データベースのブレードの 「**設定**」 セクションで、「**接続文字列**」 を選択します。
 
 1. 「**ADO.NET**」 タブで、SQL 認証の ADO.NET 接続文字列をメモします。
 
@@ -183,59 +183,59 @@ Windows Server 管理者の認証資格情報
 
 1. **az30303a1.csproj** ファイルを保存して閉じます。
 
-1. Cloud Shell ペインで、組み込みのエディターを使用して、**Program.cs** ファイルを開き、内容を次のコードに置き換えてファイルを変更します。 
+1. Cloud Shell ペインで、組み込みのエディター(**code** コマンドで起動できます)を使用して、**Program.cs** ファイルを開き、内容を次のコードに置き換えてファイルを変更します。 
 
    ```cs
-   using System;
-   using System.Data.SqlClient;
-   using System.Text;
+    using System;
+    using System.Data.SqlClient;
+    using System.Text;
 
-   namespace sqltest
-   {
-       class Program
-       {
-           static void Main(string「] args)
-           {
-               try 
-               { 
-                   SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                   builder.ConnectionString="<your_ado_net_connection_string>";
+    namespace sqltest
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                try 
+                { 
+                    SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+                    builder.ConnectionString="<your_ado_net_connection_string>";
 
-                   using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
-                   {
-                       Console.WriteLine("\nQuery data example:");
-                       Console.WriteLine("=========================================\n");
-        
-                       connection.Open();       
-                       StringBuilder sb = new StringBuilder();
-                       sb.Append("SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName ");
-                       sb.Append("FROM [SalesLT].[ProductCategory] pc ");
-                       sb.Append("JOIN [SalesLT].[Product] p ");
-                       sb.Append("ON pc.productcategoryid = p.productcategoryid;");
-                       String sql = sb.ToString();
+                    using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+                    {
+                        Console.WriteLine("\nQuery data example:");
+                        Console.WriteLine("=========================================\n");
 
-                       using (SqlCommand command = new SqlCommand(sql, connection))
-                       {
-                           using (SqlDataReader reader = command.ExecuteReader())
-                           {
-                               while (reader.Read())
-                               {
-                                   Console.WriteLine("{0} {1}", reader.GetString(0), reader.GetString(1));
-                               }
-                           }
-                       }                    
-                   }
-               }
-               catch (SqlException e)
-               {
-                   Console.WriteLine(e.ToString());
-               }
-               Console.WriteLine("\nDone. Press enter.");
-               Console.ReadLine(); 
-           }
-       }
-   }
-   ```
+                        connection.Open();       
+                        StringBuilder sb = new StringBuilder();
+                        sb.Append("SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName ");
+                        sb.Append("FROM [SalesLT].[ProductCategory] pc ");
+                        sb.Append("JOIN [SalesLT].[Product] p ");
+                        sb.Append("ON pc.productcategoryid = p.productcategoryid;");
+                        String sql = sb.ToString();
+
+                        using (SqlCommand command = new SqlCommand(sql, connection))
+                        {
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    Console.WriteLine("{0} {1}", reader.GetString(0), reader.GetString(1));
+                                }
+                            }
+                        }                    
+                    }
+                }
+                catch (SqlException e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+                Console.WriteLine("\nDone. Press enter.");
+                Console.ReadLine(); 
+            }
+        }
+     }
+```
 
 1. エディター ウィンドウは開いたままにします。 
 
@@ -245,7 +245,7 @@ Windows Server 管理者の認証資格情報
 
 1. エディター ウィンドウにコピーした接続文字列で、プレースホルダー `{your_password}` を **Pa55w.rd1234** に置き換えます。
 
-1. **Program.cs** ファイルを保存して閉じます
+1. **Program.cs** ファイルを保存して閉じます（保存するには **Ctrl + q**、終了するには **Ctrl + q** )。
 
 
 #### タスク 3: .NET Core コンソール アプリをテストする
