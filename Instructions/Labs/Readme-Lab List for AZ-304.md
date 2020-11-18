@@ -1,5 +1,5 @@
 ﻿
-#AZ-304: GitHub のラボ ファイル名 
+# AZ-304: GitHub のラボ ファイル名 
  
 **ソース リポジトリ: [https://github.com/MicrosoftLearning/AZ-304JA-Microsoft-Azure-Architect-Design/](https://github.com/MicrosoftLearning/AZ-304JA-Microsoft-Azure-Architect-Design/)**
 
