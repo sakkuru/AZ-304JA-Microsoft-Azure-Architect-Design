@@ -1,4 +1,4 @@
----
+﻿---
 lab:
     title: '4: Azure AD の認証と承認の管理'
     module: 'モジュール 4: 認証と承認の設計'
@@ -78,6 +78,9 @@ Windows Server 管理者の認証資格情報
     Test-AzDnsAvailability -DomainNameLabel <custom-label> -Location '<location>'
     ```
       >**注意**: Azure VM をプロビジョニングできる Azure リージョンを特定するには、 [https://azure.microsoft.com/ja-jp/regions/offers/](https://azure.microsoft.com/ja-jp/regions/offers/) を参照してください。
+      ```powershell
+      Get-AzLocation | FT
+      ```
 
 1. コマンドが **True** へ戻したことを確認します。そうでない場合は、コマンドが **True**へ戻すまで、`<custom-label>`の異なる値で同じコマンドを再実行します。
 
@@ -92,12 +95,14 @@ Windows Server 管理者の認証資格情報
 
    ```powershell
    $location = '<Azure region>'
+   ```
+   ```powershell
    New-AzSubscriptionDeployment `
      -Location $location `
-     -Name az30310subaDeployment `
-     -TemplateFile $HOME/azuredeploy30310suba.json `
+     -Name az30410subaDeployment `
+     -TemplateFile $HOME/azuredeploy30410suba.json `
      -rgLocation $location `
-     -rgName 'az30310a-labRG'
+     -rgName 'az30410a-labRG'
    ```
 
 1. Azure portal で、**Cloud Shell** ウィンドウを閉じます。
@@ -115,7 +120,7 @@ Windows Server 管理者の認証資格情報
     | 設定 | 値 | 
     | --- | --- |
     | サブスクリプション | このラボのために使用する Azure サブスクリプションの名前 |
-    | リソース グループ | **az30310a-labRG** |
+    | リソース グループ | **az30410a-labRG** |
     | DNS プレフィックス | 前のタスクで識別した DNS ホスト名| 
 
 1. **Create an Azure VM with a new AD Forest(新しい AD フォレストで Azure VM を作成する)** ブレードで、「**確認および作成**」 をクリックし、さらに「**作成**」 をクリックします。
@@ -154,7 +159,7 @@ Windows Server 管理者の認証資格情報
 
 1. Azure portal を表示するブラウザーのページを更新し、**Azure Active Directory** を検索して選択し、「Azure Active Directory」 ブレードで 「**テナントの切り替え**」 を選択します。
 
-1. **すべてのテナント** タブで **Adatum Lab**を選択します。 
+1. **Adatum Lab** カード上の「ディレクトリ + サブスクリプション」ブレードで、**「切り替え」**を選択します。
 
 
 #### タスク 2: Azure AD ユーザーの作成および構成
@@ -171,8 +176,8 @@ Windows Server 管理者の認証資格情報
 
     | 設定 | 値 |
     | --- | --- |
-    | ユーザー名 | **az30310-aaduser1** |
-    | 名前 | **az30310-aaduser1** |
+    | ユーザー名 | **az30410-aaduser1** |
+    | 名前 | **az30410-aaduser1** |
     | 自動生成されたパスワード | 有効 |
     | パスワードの表示 | 有効 |
     | ロール | **グローバル管理者** |
@@ -182,9 +187,9 @@ Windows Server 管理者の認証資格情報
 
 1. 「**新しいユーザー**」 ブレードで 「**作成**」 を選択します
 
-1. ラボ コンピューターで **InPrivate** ブラウザーの画面を開き、新しく作成した **az30310-aaduser1** ユーザー アカウントを使用して [Azure portal](https://portal.azure.com) にログインします。パスワードの更新を求められたら、パスワードを **Pa55w.rd1234** に変更します。 
+1. ラボ コンピューターで **InPrivate** ブラウザーの画面を開き、新しく作成した **az30410-aaduser1** ユーザー アカウントを使用して [Azure portal](https://portal.azure.com) にログインします。パスワードの更新を求められたら、パスワードを **Pa55w.rd1234** に変更します。 
 
-1. Azure portal から **az30310-aaduser1** ユーザーとしてサイン アウトし、InPrivate ブラウザーの画面を閉じます。
+1. Azure portal から **az30410-aaduser1** ユーザーとしてサイン アウトし、InPrivate ブラウザーの画面を閉じます。
 
 
 #### タスク 3: Azure AD Premium P2 ライセンスをアクティブ化して割り当てる
@@ -201,7 +206,7 @@ Windows Server 管理者の認証資格情報
 
 1. 「**Azure Active Directory Premium P2**」 で **ライセンスされているユーザー** ブレード、**+ 割り当て** を選択してください。 
 
-1. **ライセンスの割り当て** ブレードで、**ユーザー** ブレードを選択し、自身のアカウントと **az30310-aaduser1** ユーザー アカウントを選択します。
+1. **ライセンスの割り当て** ブレードで、**ユーザー** ブレードを選択し、自身のアカウントと **az30410-aaduser1** ユーザー アカウントを選択します。
 
 1. **ライセンスを割り当てる** ブレードに戻り、**割り当てオプション** を選択します。**ライセンス オプション** ブレードに記載されているオプションを確認し、**OK** を選択します。
 
@@ -212,7 +217,7 @@ Windows Server 管理者の認証資格情報
   
 この演習の主なタスクは次のとおりです。
 
-1. Azur AD テナントにカスタム ドメイン名を割り当てる
+1. Azure AD テナントにカスタム ドメイン名を割り当てる
 
 1. Azure VM で AD DS を構成する
 
@@ -221,9 +226,9 @@ Windows Server 管理者の認証資格情報
 1. 同期されたユーザー アカウントのプロパティを構成する
 
 
-#### タスク 1: Azur AD テナントにカスタム ドメイン名を割り当てる
+#### タスク 1: Azure AD テナントにカスタム ドメイン名を割り当てる
 
-1. Azure portal で **Adatum Lab** に移動します。**| 概要** ブレード。
+1. Azure portal で **Azure Active Directory Adatum Lab** に移動します。**| 概要** ブレード。
 
 1. **Adatum Lab** で **| 概要**ブレード、**カスタム ドメイン名** を選択します。
 
@@ -244,11 +249,9 @@ Windows Server 管理者の認証資格情報
 
 > **注**: この演習を開始する前に、ラボの初めに開始した Azure VM のデプロイが完了していることを確認してください。
 
-1. Azure Active Directory の **概要** ページで、**テナントの切り替え** を選択し、VM をデプロイしたテナントに切り替えます。
+1. Azure portalで、**仮想マシン** を検索して選択し、 **「Virtual Machines」** ブレードで、**az30410a-vm1** を選択します 。
 
-1. Azure portalで、**仮想マシン** を検索して選択し、 **「Virtual Machines」** ブレードで、**az30310a-vm1** を選択します 。
-
-1. **az30310a-vm1** ブレードで、**接続** を接続し、ドロップダウン メニューで **RDP** を選択し、**IP アドレス** ドロップダウン リストで **ロードバランサーのパブリック IP アドレス** エントリを選択し、次に **RDP ファイルをダウンロード** を選択します。
+1. **az30410a-vm1** ブレードで、**接続** を接続し、ドロップダウン メニューで **RDP** を選択し、**IP アドレス** ドロップダウン リストで **ロードバランサーのパブリック IP アドレス** エントリを選択し、次に **RDP ファイルをダウンロード** を選択します。
 
 1. プロンプトが表示されたら、次の認証情報を入力します。
 
@@ -257,9 +260,9 @@ Windows Server 管理者の認証資格情報
     | ユーザー名 | **Student** |
     | パスワード | **Pa55w.rd1234** |
 
-1. **az30310a-vm1** へのリモート デスクトップ セッション内にある 「サーバー マネージャー」 ウィンドウで、「**ローカル サーバー**」 を選択し、「**IE 強化されたセキュリティ構成**」 ラベルの横にある 「**オン**」 のリンクを選択し、「**IE 強化されたセキュリティ構成**」 ダイアログ ボックスで、両方の 「**オフ**」 オプションを選択します。
+1. **az30410a-vm1** へのリモート デスクトップ セッション内にある 「サーバー マネージャー」 ウィンドウで、「**ローカル サーバー**」 を選択し、「**IE 強化されたセキュリティ構成**」 ラベルの横にある 「**オン**」 のリンクを選択し、「**IE 強化されたセキュリティ構成**」 ダイアログ ボックスで、両方の 「**オフ**」 オプションを選択します。
 
-1. **az30310a-vm1** へのリモート デスクトップ セッション内にある 「サーバー マネージャー」 ウィンドウで、「**ツール**」 を選択し、ドロップダウン メニューで、「**Active Directory 管理センター**」 を選択します。
+1. **az30410a-vm1** へのリモート デスクトップ セッション内にある 「サーバー マネージャー」 ウィンドウで、「**ツール**」 を選択し、ドロップダウン メニューで、「**Active Directory 管理センター**」 を選択します。
 
 1. 「**Active Directory Administrative Center**」 で、「**adatum (Local)**」 を選択し、右側の「**Tasks**」  ペインで、「**New**」 を選択し、カスケード メニューで 「**Organizational Unit(組織単位)**」 を選択します。
 
@@ -273,16 +276,16 @@ Windows Server 管理者の認証資格情報
 
     | 設定 | 値 | 
     | --- | --- |
-    | Full name | **aduser1** |
+    | Full Name | **aduser1** |
     | User UPN logon | **aduser1** |
-    | User SamAccountName Logon | **aduser1** |
+    | User SamAccountName logon | **aduser1** |
     | パスワード | **Pa55w.rd1234** | 
     | その他のパスワード オプション | **Password never expires(パスワードは期限切れになりません)** |
 
 
 #### タスク 3: Azure AD Connect のインストール
 
-1. **az30310a-vm1** へのリモートデスクトップセッション内 で、Internet Explorer を起動し、[Azure portal](https://portal.azure.com) に移動し、前の演習で作成した **az30310-aaduser1** ユーザー アカウントを使用してサインインします。プロンプトが表示されたら、記録した完全なユーザー名とパスワード **Pa55w.rd1234** を指定します。
+1. **az30410a-vm1** へのリモートデスクトップセッション内 で、Internet Explorer を起動し、[Azure portal](https://portal.azure.com) に移動し、前の演習で作成した **az30410-aaduser1** ユーザー アカウントを使用してサインインします。プロンプトが表示されたら、記録した完全なユーザー名とパスワード **Pa55w.rd1234** を指定します。
 
 1. Azure portal で、**Azure Active Directory**を検索して選択し、**Adatum Lab** で **Overview** ブレード、**Azure AD Connect** を選択します。
 
@@ -300,7 +303,7 @@ Windows Server 管理者の認証資格情報
 
 1. **ユーザーのサインイン**ページで、**Password Hash Synchlonization(パスワード ハッシュの同期)** のみ有効にして、**次へ** を選択します。
 
-1. **Azure ADに接続する**ページで、前の演習で作成した**az30310-aaduser1**ユーザー アカウントの認証情報を使用して認証し、 **次へ**を選択します。 
+1. **Azure ADに接続する**ページで、前の演習で作成した**az30410-aaduser1**ユーザー アカウントの認証情報を使用して認証し、 **次へ**を選択します。 
 
 1. **ディレクトリに接続する**ページで、 **adatum.com** フォレスト エントリの右側にある**Add Directory(ディレクトリの追加)**ボタンを選択します。
 
@@ -348,11 +351,11 @@ Windows Server 管理者の認証資格情報
 
 1. 「**aduser1**」 の | 「**プロフィール**」 ブレードの 「**Job Info(職務情報)**」 セクションに、「**Department(部署)**」 属性が設定されていないことに注意してください。
 
-1. **az30310a-vm1** へのリモート デスクトップ セッション内で、 **Active Directory 管理センター** に切り替えて、**ToSync** OU のオブジェクトのリストで 「**aduser1**」 エントリを選択し、「**Tasks(タスク)**」 ペインの 「**ToSync**」 セクションで、「**Properties(プロパティ)**」 を選択します。
+1. **az30410a-vm1** へのリモート デスクトップ セッション内で、 **Active Directory 管理センター** に切り替えて、**ToSync** OU のオブジェクトのリストで 「**aduser1**」 エントリを選択し、「**Tasks(タスク)**」 ペインの 「**ToSync**」 セクションで、「**Properties(プロパティ)**」 を選択します。
 
 1. **aduser1** ウィンドウの、 「**Organization(組織)**」 セクションで、 「**Department(部署)**」 テキスト ボックスに、「**Sales**」と入力し、 「**OK**」 をクリックします。
 
-1. **az30310a-vm1** へのリモート デスクトップ セッション内で、**Windows PowerShell** を管理者で起動します。
+1. **az30410a-vm1** へのリモート デスクトップ セッション内で、**Windows PowerShell** を管理者で起動します。
 
 1. 次のコマンドを実行して、Azure AD Connect の差分同期を起動します。
 
@@ -392,7 +395,7 @@ Windows Server 管理者の認証資格情報
 
 #### タスク 1: Azure AD セキュリティのデフォルトを無効にします。
 
-1. **az30310a-vm1** へのリモート デスクトップ セッション内で 、Azure portal が表示されている Internet Explorer ウィンドウで、 **Adatum Lab** テナントの 「**概要**」 ブレードに移動します。
+1. **az30410a-vm1** へのリモート デスクトップ セッション内で 、Azure portal が表示されている Internet Explorer ウィンドウで、 **Adatum Lab** テナントの 「**概要**」 ブレードに移動します。
 
 1. **Adatum Lab** で「**概要**」 ブレードの 「**管理**」 セクションで、「**プロパティ**」 を選択します。
 
@@ -422,10 +425,8 @@ Windows Server 管理者の認証資格情報
 
 #### タスク 3: Azure AD の条件付きアクセスを確認する
 
-1. **az30310a-vm1** へのリモート デスクトップ セッション内で、新しい **InPrivate Browsing** Internet Explorer ウィンドウを起動し、アクセス パネル アプリケーション ポータル [https://account.activedirectory.windowsazure.com](https://account.activedirectory.windowsazure.com) に移動します。
+1. **az30410a-vm1** へのリモート デスクトップ セッション内で、新しい **InPrivate Browsing** Internet Explorer ウィンドウを起動し、アクセス パネル アプリケーション ポータル [https://account.activedirectory.windowsazure.com](https://account.activedirectory.windowsazure.com) に移動します。
 
-    > **注**: Internet Explorer の上部を右クリックするとコンテキストメニューが表示されるので、**Menu bar** を選択してメニューを有効にしてください。**Tools** メニューに **Inprivate Browsing** が見つかります。
-    
 1. プロンプトが表示されたら、同期された Azure AD アカウント **aduser1** で、前の演習で記録した完全なユーザー名と、**Pa55w.rd1234** のパスワードを使用してサインインします。 
 
 1. アクセス パネル アプリケーション ポータルに正常にサインインできることを確認します。 
@@ -434,30 +435,20 @@ Windows Server 管理者の認証資格情報
 
 1. 今回は、「**More Information Required(追加情報が必要)**」のメッセージが表示されていることを確認してください。メッセージを表示するページ内で、「**次へ**」 を選択します。 
 
-1. **Microsoft Authenticator** ページが表示されるので、一番下にある「**I want to set up a different method**」を選択します。
+1. その時点で、「**追加のセキュリティ検証**」 ページ にリダイレクトされます。このページでは、多要素認証の構成をステップごとに説明します。
 
-1. **Choose a different method** ウィンドウが表示されたら「**Phone**」を選択して「**Confirm**」をクリックします。
-
-1. SMS が受信可能な電話番号を設定し、「**Next**」をクリックします。
-
-1. 設定した電話番号に SMS が通知されるので、コードを転記して **Next** をクリックします。
-
-1. **SMS verified. Your phone was registered successfully** が表示されたら **Next** をクリックします。
-
-1. **Done** をクリックします。
-
-1. Azure Portal へのログオンが完了します。
+    > **注**: 多要素認証構成の完了はオプションです。続行する場合は、モバイル デバイスを認証電話として指定するか、モバイル デバイスを使用してモバイル アプリを実行する必要があります。
 
 
 #### タスク 4: ラボにデプロイした Azure リソースを削除する
 
-1. **az30310a-vm1** へのリモート デスクトップ セッション内で、Internet Explorer を起動し、IT プロフェッショナル RTW 向けの Microsoft Online Services サインイン アシスタント [https://go.microsoft.com/fwlink/p/?LinkId=286152](https://go.microsoft.com/fwlink/p/?LinkId=286152) に移動します。 
+1. **az30410a-vm1** へのリモート デスクトップ セッション内で、Internet Explorer を起動し、IT プロフェッショナル RTW 向けの Microsoft Online Services サインイン アシスタント [https://go.microsoft.com/fwlink/p/?LinkId=286152](https://go.microsoft.com/fwlink/p/?LinkId=286152) に移動します。 
 
 1. IT プロフェッショナル RTW 向け Microsoft Online Services サインイン アシスタントのダウンロード ページで、「**ダウンロード**」 を選択し、「**必要なダウンロードを選択してください**」 ページで、「**en\msoidcli_64.msi**」 を選択し、「**次へ**」 を選択します。 
 
 1. プロンプトが表示されたら、既定のオプションを使用して、**Microsoft Online Services サインイン アシスタントのセットアップ**を実行します。
 
-1. セットアップが完了したら、**az30310a-vm1** へのリモート デスクトップ セッション内で、「**Windows PowerShell**」 コンソールを起動します。
+1. セットアップが完了したら、**az30410a-vm1** へのリモート デスクトップ セッション内で、「**Windows PowerShell**」 コンソールを起動します。
 
 1. **管理者**で「**Windows PowerShell**」 ウィンドウで、次のコマンドを実行して、必要な PowerShell モジュールをインストールします。
 
@@ -472,7 +463,7 @@ Windows Server 管理者の認証資格情報
    Connect-MsolService
    ```
 
-1. 認証を求められたら、**az30310-aaduser1** ユーザー アカウントの認証情報を提供します。
+1. 認証を求められたら、**az30410-aaduser1** ユーザー アカウントの認証情報を提供します。
 
 1. **管理者**で「**Windows PowerShell**」 ウィンドウで、次のコマンドを実行して、Azure AD Connect の同期を無効にします。
 
@@ -484,8 +475,6 @@ Windows Server 管理者の認証資格情報
 
 1. Azure portal で、 「**ユーザー - すべてのユーザー**」 ブレードに移動し、このラボで作成したすべてのユーザー アカウントには、「**ソース**」 列に **Azure Active Directory** があることを確認します。 
 
-    > **注**: そうでない場合は、ブラウザーのページを更新します。
-
 1. 「**ユーザー - すべてのユーザー**」 ブレードで、このラボで作成した各ユーザー アカウントを選択し、ツールバーで 「**削除**」 を選択します。 
 
 1. Adatum Lab Azure AD テナントの 「**Adatum Lab - 概要**」 ブレードに移動し、「**テナントを削除**」 を選択し、「**ディレクトリ 'Adatum Lab' を削除する**」 ブレードで、「**Azure リソースを削除する権限を取得する**」 リンクを選択し、Azure Active Directory の 「**プロパティ**」 ブレードで、「**Azure リソースのアクセス管理**」 を 「**はい**」 に設定し、「**保存**」 を選択します。
@@ -494,12 +483,12 @@ Windows Server 管理者の認証資格情報
 
 1. 「**ディレクトリ 'Adatum Lab' を削除する**」 ブレードに戻り、「**削除**」 を選択します。
 
-1. **az30310a-vm1** へのリモート デスクトップ セッション内の Azure portal を表示しているブラウザーの画面で、Cloud Shell ペイン内で PowerShell セッションを起動します。
+1. **az30410a-vm1** へのリモート デスクトップ セッション内の Azure portal を表示しているブラウザーの画面で、Cloud Shell ペイン内で PowerShell セッションを起動します。
 
 1. 「Cloud Shell」 ウィンドウから次のコマンドを実行して、この演習で作成したリソース グループを一覧表示します。
 
    ```powershell
-   Get-AzResourceGroup -Name 'az30310*'
+   Get-AzResourceGroup -Name 'az30410*'
    ```
 
     > **注**: このラボで作成したリソース グループのみが出力に含まれていることを確認します。このグループは、このタスクで削除されます。
@@ -507,7 +496,7 @@ Windows Server 管理者の認証資格情報
 1. 「Cloud Shell」 ウィンドウから次を実行して、このラボで作成したリソース グループを削除します
 
    ```powershell
-   Get-AzResourceGroup -Name 'az30310*' | Remove-AzResourceGroup -Force -AsJob
+   Get-AzResourceGroup -Name 'az30410*' | Remove-AzResourceGroup -Force -AsJob
    ```
 
 1. 「Cloud Shell」 ウィンドウを閉じます。

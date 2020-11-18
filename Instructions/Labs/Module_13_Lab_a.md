@@ -1,4 +1,4 @@
----
+﻿---
 lab:
     title: '13: Azure Logic Apps と Azure Event Gridの統合を実装する'
     module: 'モジュール 13: アプリケーション アーキテクチャの設計'
@@ -73,6 +73,12 @@ Windows Server 管理者の認証資格情報
 1. **Bash** や **PowerShell** のどちらかを選択するためのプロンプトが表示されたら、**PowerShell** を選択します。 
 
     >**注**: **Cloud Shell** を初めて起動し、「**ストレージがマウントされていません**」というメッセージが表示された場合は、このラボで使用しているサブスクリプションを選択し、「**ストレージの作成**」を選択します。 
+
+1. Cloud Shell ペインから次を実行して **Microsoft.EventGrid** プロバイダーをサブスクリプションに追加します:
+
+   ```powershell
+   Register-AzResourceProvider -ProviderNamespace 'Microsoft.EventGrid'
+   ```
 
 1. Cloud Shell ペインのツールバーで、 **ファイルのアップロード/ダウンロード** アイコンを選択し、ドロップダウン メニューで **アップロード**を選択して、ファイル  **\\\\\AZ303\\AllFiles\Labs\\04\\azuredeploy30304suba.json** を Cloud Shell ホーム ディレクトリにアップロードします。
 
