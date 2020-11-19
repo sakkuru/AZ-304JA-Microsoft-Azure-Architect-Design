@@ -96,9 +96,9 @@ Windows Server 管理者の認証資格情報
 
       >**注意**: Azure VM をプロビジョニングできる Azure リージョンを特定するには、次を参照してください。 [**https://azure.microsoft.com/ja-jp/regions/offers/**](https://azure.microsoft.com/ja-jp/regions/offers/)
 
-1. Cloud Shell ペインから、Azure Resource Manager テンプレート **\allfile\AZ-300T02\Module_01\azuredeploy30304rga.json** をアップロードします。
+1. Cloud Shell ペインから、Azure Resource Manager テンプレート **\\\\AZ303\\AllFiles\Labs\\04\\azuredeploy30304rga.json** をアップロードします。
 
-1. Cloud Shell ペインから、Azure Resource Manager パラメーター ファイル **\\\\ AZ303 \\ AllFilesLabs \\ 04 \\ azuredeploy30304rga.parameters.json** をアップロードします 。
+1. Cloud Shell ペインから、Azure Resource Manager パラメーター ファイル **\\\\AZ303\\AllFilesLabs\\04\\azuredeploy30304rga.parameters.json** をアップロードします 。
 
 1. Cloud Shell ペインから次を実行して、このラボで使用する Windows Server 2019 を実行する Azure VM をデプロイします:
 

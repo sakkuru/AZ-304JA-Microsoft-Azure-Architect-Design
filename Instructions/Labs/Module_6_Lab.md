@@ -78,7 +78,7 @@ Windows Server 管理者の認証資格情報
     | サーバー管理者のログイン | **sqladmin** |
     | パスワード | **Pa55w.rd1234** |
     | 場所 | SQL データベースをプロビジョニングできる Azure リージョンの名前 |
-    | Azure サービスにサーバーへのアクセスを許可する | **チェックボックスがオフになっていることを確認する** |
+    | Azure サービスにサーバーへのアクセスを許可する | チェックボックスがオフになっていることを確認する |
 
 1. 「**コンピューティング + ストレージ**」 ラベルの横で、「**データベースを構成する**」 リンクを選択します。
 
@@ -94,7 +94,7 @@ Windows Server 管理者の認証資格情報
     | Azure サービスとリソースにサーバーへのアクセスを許可する | **いいえ** |
     | 現在のクライアント IP アドレスを追加する | **はい** |
 
-1. 「**次へ:**」 を選択します。**追加設定 >**」 を選択します。 
+1. 「**次へ:**」 を選択します。「**追加設定 >**」 を選択します。 
 
 1. 「**SQL Database の作成**」 ブレードの 「**追加の設定**」 タブで、次の設定を指定します (他の設定は既定値のままにします)。
 
@@ -185,7 +185,7 @@ Windows Server 管理者の認証資格情報
 
 1. Cloud Shell ペインで、組み込みのエディター(**code** コマンドで起動できます)を使用して、**Program.cs** ファイルを開き、内容を次のコードに置き換えてファイルを変更します。 
 
-   ```cs
+```cs
     using System;
     using System.Data.SqlClient;
     using System.Text;
@@ -241,7 +241,7 @@ Windows Server 管理者の認証資格情報
 
 1. Azure portal のブレードの **az30303a-db1** データベースの接続文字列を表示するブレードで、ADO.NET 接続文字列をコピーします。 
 
-1. エディター ウィンドウに戻り、プレースホルダー `<your_ado_net_connection_string> ` を、前の手順でコピーした接続文字列の値に置き換えます。
+1. エディター ウィンドウに戻り、プレースホルダー `<your_ado_net_connection_string>` を、前の手順でコピーした接続文字列の値に置き換えます。
 
 1. エディター ウィンドウにコピーした接続文字列で、プレースホルダー `{your_password}` を **Pa55w.rd1234** に置き換えます。
 
@@ -313,6 +313,12 @@ Windows Server 管理者の認証資格情報
 
    ```sh
    az group list --query "[?starts_with(name,'az30303')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   ```
+
+1. From the Cloud Shell pane, run the following to remove the folder named **az30303a1**:
+
+   ```sh
+   rm -r ~/az30303a1
    ```
 
 1. 「Cloud Shell」 ウィンドウを閉じます。
