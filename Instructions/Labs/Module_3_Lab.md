@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '3: Azure Migrate を使用して Hyper-V VM を Azure に移行する'
     module: 'モジュール 3: データ移行の設計'
