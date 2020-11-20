@@ -315,7 +315,7 @@ Windows Server 管理者の認証資格情報
    az group list --query "[?starts_with(name,'az30303')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
    ```
 
-1. From the Cloud Shell pane, run the following to remove the folder named **az30303a1**:
+1. 「Cloud Shell」 ウィンドウから次を実行して、次を実行して **az30303a1** という名前のフォルダーを削除します。
 
    ```sh
    rm -r ~/az30303a1
