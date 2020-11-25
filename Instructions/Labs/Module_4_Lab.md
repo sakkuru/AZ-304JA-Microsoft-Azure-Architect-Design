@@ -100,7 +100,7 @@ Windows Server 管理者の認証資格情報
    New-AzSubscriptionDeployment `
      -Location $location `
      -Name az30410subaDeployment `
-     -TemplateFile $HOME/azuredeploy30410suba.json `
+     -TemplateFile $HOME/azuredeploy30310suba.json `
      -rgLocation $location `
      -rgName 'az30410a-labRG'
    ```
@@ -280,7 +280,7 @@ Windows Server 管理者の認証資格情報
     | User UPN logon | **aduser1** |
     | User SamAccountName logon | **aduser1** |
     | パスワード | **Pa55w.rd1234** | 
-    | その他のパスワード オプション | **Password never expires(パスワードは期限切れになりません)** |
+    | その他のパスjunichia@ワード オプション | **Password never expires(パスワードは期限切れになりません)** |
 
 
 #### タスク 3: Azure AD Connect のインストール
@@ -416,7 +416,7 @@ Windows Server 管理者の認証資格情報
 
 1. 「**新規**」 ブレードの 「**Assignment(割り当て)**」 セクションで、「**ユーザーとグループ**」 を選択し、「**Include(含む)**」 タブで、「**Select users and groups(ユーザーとグループを選択)**」 を選択し、「**Users and groups(ユーザーとグループ)**」 チェックボックスをオンにし、「**選択**」 ブレード で、「**aduser1**」 を選択し、「**選択**」 をクリックして選択項目を確定します。
 
-1. 「**新規**」 ブレードに戻り、「**割り当て**」 セクションで、「**Cloud apps and actions(クラウド アプリまたはアクション)**」 を選択し、「**Include(含む)**」 タブで、「**Select app(アプリを選択)**」 を選択し、「**選択**」 ブレードで、「**Microsoft Azure Management**」 チェックボックスをオンにし、「**選択**」 をクリックして選択項目を確定します。
+1. 「**新規**」 ブレードに戻り、「**割り当て**」 セクションで、「**Cloud apps and actions(クラウド アプリまたはアクション)**」 を選択し、「**Include(対象)**」 タブで、「**Select app(アプリを選択)**」 を選択し、「**選択**」 ブレードで、「**Microsoft Azure Management**」 チェックボックスをオンにし、「**選択**」 をクリックして選択項目を確定します。
 
 1. 「**新規**」 ブレードに戻り、「**Access controls(アクセス制御)**」 セクションで、「**Grant access(許可)**」 を選択し、「**Require multi-factor authentication(多要素認証が必要)**」 を選択し、「**選択**」 をクリックして選択項目を確定します。
 
