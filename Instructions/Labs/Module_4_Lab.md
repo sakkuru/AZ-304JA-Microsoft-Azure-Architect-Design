@@ -280,7 +280,7 @@ Windows Server 管理者の認証資格情報
     | User UPN logon | **aduser1** |
     | User SamAccountName logon | **aduser1** |
     | パスワード | **Pa55w.rd1234** | 
-    | その他のパスjunichia@ワード オプション | **Password never expires(パスワードは期限切れになりません)** |
+    | その他のパスワード オプション | **Password never expires(パスワードは期限切れになりません)** |
 
 
 #### タスク 3: Azure AD Connect のインストール
