@@ -442,9 +442,9 @@ Windows Server 管理者の認証資格情報
 
 #### タスク 4: ラボにデプロイした Azure リソースを削除する
 
-1. **az30410a-vm1** へのリモート デスクトップ セッション内で、Internet Explorer を起動し、IT プロフェッショナル RTW 向けの Microsoft Online Services サインイン アシスタント [https://go.microsoft.com/fwlink/p/?LinkId=286152](https://go.microsoft.com/fwlink/p/?LinkId=286152) に移動します。 
+1. **az30410a-vm1** へのリモート デスクトップ セッション内で、Internet Explorer を起動し、IT プロフェッショナル RTW 向けの Microsoft Online Services サインイン アシスタント [https://www.microsoft.com/en-us/download/confirmation.aspx?id=28177&6B49FDFB-8E5B-4B07-BC31-15695C5A2143=1](https://www.microsoft.com/en-us/download/confirmation.aspx?id=28177&6B49FDFB-8E5B-4B07-BC31-15695C5A2143=1) に移動します。 
 
-1. IT プロフェッショナル RTW 向け Microsoft Online Services サインイン アシスタントのダウンロード ページで、「**ダウンロード**」 を選択し、「**必要なダウンロードを選択してください**」 ページで、「**en\msoidcli_64.msi**」 を選択し、「**次へ**」 を選択します。 
+1. IT プロフェッショナル RTW 向け Microsoft Online Services サインイン アシスタントのダウンロード ページで、「**ダウンロード**」 を選択し、「**必要なダウンロードを選択してください**」 ページで、「**msoidcli_64.msi**」 を選択し、「**次へ**」 を選択します。 
 
 1. プロンプトが表示されたら、既定のオプションを使用して、**Microsoft Online Services サインイン アシスタントのセットアップ**を実行します。
 
