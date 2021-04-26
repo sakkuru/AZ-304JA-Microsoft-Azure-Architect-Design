@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '13: Azure Logic Apps と Azure Event Grid の統合を実装する'
     module: 'モジュール 13: アプリケーション アーキテクチャの設計'
