@@ -164,11 +164,11 @@ Windows Server 管理者の資格情報
 
 #### タスク 2: Azure AD ユーザーを作成および構成する
 
-1. 「**Adatum Lab \| 概要** Azure Active Directory」 ブレードの、「**管理**」 セクションで、「**ユーザー**」 から 「**ユーザー**」 を選択します** | **「**すべてのユーザー**」 ブレード、ユーザー アカウントを選択して、「**プロフィール**」 設定を表示します。 
+1. 「**Adatum Lab \| 概要** Azure Active Directory」 ブレードの、「**管理**」 セクションで、「**ユーザー**」 から 「**ユーザー**」 を選択します | 「**すべてのユーザー**」 ブレード、ユーザー アカウントを選択して、「**プロフィール**」 設定を表示します。 
 
 1. ユーザー アカウントのプロファイル ブレードで、「**編集する**」 を選択し、「**設定**」 セクションで、「**使用場所**」 を 「**米国**」 に設定し、「**保存**」 を選択して、変更を保存します。
 
-    > ** 注**: これは、このラボの後半で Azure AD Premium P2 ライセンスをユーザー アカウントに割り当てるために必要です。
+    > **注**: これは、このラボの後半で Azure AD Premium P2 ライセンスをユーザー アカウントに割り当てるために必要です。
 
 1. 「**ユーザー - すべてのユーザー**」 ブレードに戻り、「**+ 新しいユーザー**」 を選択します。
 
@@ -196,7 +196,7 @@ Windows Server 管理者の資格情報
 
 1. Azure portal を表示しているブラウザーの画面に戻り、**Adatum Lab** Azure AD テナントの**概要**ブレードに移動し、「**管理**」 セクションで、「**ライセンス**」 を選択します。
 
-1. 「**ライセンス \**」**| **「**概要**」ブレード、「**すべての製品**」 を選択し、「**+ 試用/購入**」 を選択します。
+1. 「**ライセンス**」 **| ** 「**概要**」ブレード、「**すべての製品**」 を選択し、「**+ 試用/購入**」 を選択します。
 
 1. 「**アクティブ化**」 ブレードの 「**Azure AD Premium P2**」 セクションで、「**無料試用版**」 を選択してから、「**アクティブ化**」 を選択します。 
 
@@ -293,13 +293,13 @@ Windows Server 管理者の資格情報
 
 1. **az30410a-vm1** へのリモートデスクトップセッション内 で、Microsoft Edge を起動し、[Azure portal](https://portal.azure.com) に移動し、前の演習で作成した **az30410-aaduser1** ユーザー アカウントを使用してサインインします。メッセージが表示されたら、記録した完全なユーザー名と **Pa55w.rd1234** パスワードを指定します。
 
-1. Azure portal で、**Azure Active Directory**を検索して選択し、**Adatum Lab** で** | 概観** ブレード、**Azure AD Connect** を選択します。
+1. Azure portal で、**Azure Active Directory**を検索して選択し、**Adatum Lab** で **| 概観** ブレード、**Azure AD Connect** を選択します。
 
-1. **Adatum Lab** で** | Azure AD Connect** ブレード、**Azure AD Connect をダウンロードする**リンクを選択 します。「**Microsoft Azure Active Directory Connect**」 ダウンロード ページにリダイレクトされます。
+1. **Adatum Lab** で **| Azure AD Connect** ブレード、**Azure AD Connect をダウンロードする**リンクを選択 します。「**Microsoft Azure Active Directory Connect**」 ダウンロード ページにリダイレクトされます。
 
 1. **Microsoft Azure Active Directory Connect** のダウンロード ページで、**ダウンロード**を選択します。
 
-1. プロンプトが表示されたら、**実行**を選択して** Microsoft Azure Active Directory Connect** ウィザードを起動します。
+1. プロンプトが表示されたら、**実行**を選択して **Microsoft Azure Active Directory Connect** ウィザードを起動します。
 
 1. **Microsoft Azure Active Directory Connect** ウィザードの **Azure AD Connect へようこそ**ページで、チェックボックス**ライセンス条項とプライバシーに関する通知に同意します**を選択し、**続行**を選択します。
 
@@ -357,7 +357,7 @@ Windows Server 管理者の資格情報
 
 1. 「**aduser1**」 \| 「**プロファイル**」 ブレードの 「**ジョブ情報**」 セクションで、「**部署**」 属性が設定されていません。
 
-1. **az30410a-vm1** へのリモート デスクトップ セッション内で、 **Active Directory 管理センター** に切り替えて、** ToSync ** OU のオブジェクトのリストで 「** aduser1 **」 エントリを選択し、「**タスク**」 ペインの 「**ToSync **」 セクションで、「** プロパティ **」 を選択します。
+1. **az30410a-vm1** へのリモート デスクトップ セッション内で、 **Active Directory 管理センター** に切り替えて、** ToSync ** OU のオブジェクトのリストで 「**aduser1**」 エントリを選択し、「**タスク**」 ペインの 「**ToSync**」 セクションで、「**プロパティ**」 を選択します。
 
 1. 「**aduser1**」 ウィンドウの 「**組織**」 セクションの 「**部署**」 テキスト ボックスに「**売上**」と入力し、「**OK**」 をクリックします。
 
@@ -401,7 +401,7 @@ Windows Server 管理者の資格情報
 
 #### タスク 1: Azure AD セキュリティのデフォルトを無効にします。
 
-1. **az30410a-vm1** へのリモート デスクトップ セッション内で 、Azure portal が表示されている Microsoft Edge ウィンドウで、**Adatum Lab** に移動します。** | **Adatum Lab Azure AD テナントの 「**概要**」 ブレード。
+1. **az30410a-vm1** へのリモート デスクトップ セッション内で 、Azure portal が表示されている Microsoft Edge ウィンドウで、**Adatum Lab** に移動します。 **| ** Adatum Lab Azure AD テナントの 「**概要**」 ブレード。
 
 1. **Adatum Lab** で **|** 「**概要**」 ブレードの 「**管理**」 セクションで、「**プロパティ**」 を選択します。
 
@@ -456,7 +456,7 @@ Windows Server 管理者の資格情報
 
 1. セットアップが完了したら、**az30410a-vm1** へのリモート デスクトップ セッション内で、「**Windows PowerShell**」 コンソールを起動します。
 
-1. 「**管理者: **「**Windows PowerShell**」 ウィンドウで、次のコマンドを実行して、必要な PowerShell モジュールをインストールします。
+1. 「**管理者: 「**Windows PowerShell**」 ウィンドウで、次のコマンドを実行して、必要な PowerShell モジュールをインストールします。
 
    ```powershell
    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12

@@ -6,7 +6,7 @@ layout: home
 
 # コンテンツ ディレクトリ
 
-ラボを完了するために必要なファイルは、 [ここで](https://github.com/MicrosoftLearning/AZ-304-Microsoft-Azure-Architect-Design/archive/master.zip)ダウンロードすることができます
+ラボを完了するために必要なファイルは、 [ここで](https://github.com/MicrosoftLearning/AZ-304JA-Microsoft-Azure-Architect-Design/archive/master.zip)ダウンロードすることができます
 
 各ラボの演習とデモへのハイパーリンクを以下に一覧表示します。
 
