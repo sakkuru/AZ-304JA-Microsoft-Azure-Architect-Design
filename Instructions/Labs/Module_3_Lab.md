@@ -93,10 +93,10 @@ Windows Server 管理者の資格情報
 
 1. Azure portal で、**Cloud Shell** ウィンドウを閉じます。
 
-1. ラボ コンピューターから別のブラウザー タブを開き、[301-nested-vms-in-virtual-network Azure クイックスタート テンプレート](https://github.com/Azure/azure-quickstart-templates/tree/master/301-nested-vms-in-virtual-network) に移動して、「**Azure にデプロイする**」 を選択します。これにより、ブラウザーは自動的に Azure portal の**入れ子になった VM を持つ Hyper-V ホスト仮想マシン** ブレードにリダイレクトされます。
+1. ラボ コンピューターから別のブラウザー タブを開き、[301-nested-vms-in-virtual-network Azure クイックスタート テンプレート](https://github.com/Azure/azure-quickstart-templates/tree/master/demos/nested-vms-in-virtual-network) に移動して、「**Azure にデプロイする**」 を選択します。これにより、ブラウザーは自動的に Azure portal の**入れ子になった VM を持つ Hyper-V ホスト仮想マシン** ブレードにリダイレクトされます。
 
     ``` url
-    https://github.com/Azure/azure-quickstart-templates/tree/master/301-nested-vms-in-virtual-network
+    https://github.com/Azure/azure-quickstart-templates/tree/master/demos/nested-vms-in-virtual-network
     ```
 
 1. Azure portal の**入れ子になった VM を持つ Hyper-V ホスト仮想マシン** ブレードで、次の設定を指定します (他の設定は既定値のままにします)。
@@ -123,7 +123,7 @@ Windows Server 管理者の資格情報
 
 1. **az30308a-hv-vm** ブレードで、「**ネットワーク**」 を選択します。 
 
-1. **az30308a-hv-vm** で **| ネットワーク** ブレードで、**az30308a-hv-vm-nic1** を選択し、次に 「**受信ポート規則を追加する**」 を選択してください。
+1. **az30308a-hv-vm** で **| ネットワーク** ブレードで、**az30308a-hv-vm-nic1** タブを選択し、次に 「**受信ポート規則を追加する**」 を選択してください。
 
     > **注**: 必ず、パブリック IP アドレスが割り当てられている **az30308a-hv-vm-nic1** の設定を変更してください。
 
@@ -420,7 +420,7 @@ Windows Server 管理者の資格情報
 
     | 設定 | 値 | 
     | --- | --- |
-    | 「ユーザー名」 | **管理者** |
+    | 「ユーザー名」 | **administrator** |
     | パスワード | **Pa55w.rd1234** |
 
 1. Microsoft Edge ウィンドウの 「**アプライアンス構成マネージャー**」 ページで 「**同意する**」 ボタンを選択し、前提条件が検証されるまで待ってから、「**続行**」 を選択します。 
