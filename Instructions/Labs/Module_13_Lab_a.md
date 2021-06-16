@@ -1,6 +1,6 @@
 ﻿---
 lab:
-    title: '13: Azure Logic Apps と Azure Event Gridの統合を実装する'
+    title: '13: Azure Logic Apps と Azure Event Grid の統合を実装する'
     module: 'モジュール 13: アプリケーション アーキテクチャの設計'
 ---
 
@@ -98,7 +98,7 @@ Windows サーバー管理者の資格情報
 
 1. Cloud Shell ウィンドウから、Azure Resource Manager テンプレート **\\\\AZ304\\AllFiles\Labs\\04\\azuredeploy30304rga.json** をアップロードします。
 
-1. Cloud Shell ウィンドウから、Azure Resource Manager パラメーター ファイル**\\\\AZ304\\AllFilesLabs\\04\\azuredeploy30304rga.parameters.json** をアップロードします。
+1. Cloud Shell ウィンドウから、Azure Resource Manager パラメーター ファイル **\\\\AZ304\\AllFilesLabs\\04\\azuredeploy30304rga.parameters.json** をアップロードします。
 
 1. Cloud Shell ウィンドウから次を実行して、このラボで使用する Windows Server 2019 を実行する Azure VM をデプロイします。
 
@@ -156,7 +156,7 @@ Windows サーバー管理者の資格情報
 
 1. Azure portal で、**リソースグループ** を検索して選択します。そして、 **リソース グループ** ブレードで、**az30304a-labRG** を選択します。
 
-1. **az30304a-LabRG** ブレードに、**Access Control (IAM)**を選択します。
+1. **az30304a-LabRG** ブレードに、**Access Control (IAM)** を選択します。
 
 1. 「**az30304a-labRG | アクセス制御 (IAM)」** ブレードで、**「+ 追加」** をクリックして、**「ロールの割り当てを追加」** オプションを選択します。 
 
@@ -229,14 +229,14 @@ Windows サーバー管理者の資格情報
     | イベント タイプ アイテム - 1:  | **Microsoft.Resources.ResourceWriteSuccess** |
     | イベント タイプ アイテム - 2:  | **Microsoft.Resources.ResourceDeleteSuccess** |
 
-1. **リソースイベントが発生したとき** タイルで、**新しいパラメーターを追加** を選択し、**サブスクリプション名 **を選択します。
+1. **リソースイベントが発生したとき** タイルで、**新しいパラメーターを追加** を選択し、**サブスクリプション名** を選択します。
 
 1. **サブスクリプション名** テキスト ボックスで、**event-subscription-az30304b** を入力し、**保存**を選択します。
 
 
 #### タスク 3: Azure ロジック アプリに条件を追加します
 
-1. Azure portal に、新しくプロビジョニングされた Azure ロジック アプリのロジック アプリ デザイナー ブレードに**+ 新しい手順**を選択します。 
+1. Azure portal に、新しくプロビジョニングされた Azure ロジック アプリのロジック アプリ デザイナー ブレードに **+ 新しい手順** を選択します。 
 
 1. 操作タイルの選択で、「**コネクタとアクションを検索**」 テキストボックスを使用し、「**条件**」を検索し、結果のリストの 「**アクション**」 列で 「**条件**」 を選択してデザイナー ワークスペースに追加します。
 
