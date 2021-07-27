@@ -444,7 +444,7 @@ Windows サーバー管理者の資格情報
 
 #### タスク 2: 評価の構成、実行、および表示
 
-1. **az30308a-hv-vm** へのリモート デスクトップ セッション内で、Azure portal を表示している Microsoft Edge ウィンドウで、「**Azure Migrate | Windows、Linux、SQLサーバー**」 ブレードに戻り、「**更新**」 を選択し、「**Azure Migrate: Discovery and assessment**」 タイルで、「**評価**」 ドロップダウンを開き、「**Azure VM**」 を選択します。
+1. **az30308a-hv-vm** へのリモート デスクトップ セッション内で、Azure portal を表示している Microsoft Edge ウィンドウで、「**Azure Migrate \| Windows、Linux、SQLサーバー**」 ブレードに戻り、「**更新**」 を選択し、「**Azure Migrate: Discovery and assessment**」 タイルで、「**評価**」 ドロップダウンを開き、「**Azure VM**」 を選択します。
 
    >**注**: 場合によっては、もう一度ページを更新する必要があります。 
 
